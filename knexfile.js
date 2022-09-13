@@ -23,7 +23,8 @@ if (DB_CLIENT !== 'sqlite3') {
   module.exports = {
     client: 'sqlite3', // or 'better-sqlite3'
     connection: {
-      filename: './src/db/perdana.db'
+      filename: './src/db/perdana.db',
+      flags: ['OPEN_URI', 'OPEN_SHAREDCACHE']
     },
     migrations: {
       tableName: 'knex_migrations',

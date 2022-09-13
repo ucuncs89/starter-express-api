@@ -20,6 +20,7 @@ exports.createRegisterAccount = async (data) =>
 
         return resolve(result)
       } catch (error) {
+        console.log(error)
         return reject(new CustomError(error.name, error.nativeError.code, 400))
       }
     })()
